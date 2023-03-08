@@ -15,6 +15,7 @@ class TextFieldWithText extends StatelessWidget{
       children: [
       Text(
         title,textAlign: TextAlign.left,),
+      const SizedBox(height: 10),
       TextField(
         textAlign: TextAlign.left,
         decoration: 
@@ -24,10 +25,14 @@ class TextFieldWithText extends StatelessWidget{
         floatingLabelBehavior: FloatingLabelBehavior.never,
         
         ),
+
         
-      )
+      ),
+      const SizedBox(height: 20)
     ],
+    
     );
+    
   }
 
 }

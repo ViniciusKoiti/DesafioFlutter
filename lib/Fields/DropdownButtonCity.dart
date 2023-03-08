@@ -22,7 +22,9 @@ class _DropDownButtonCity extends State<DropDownButtonCity> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(height: 5),
         const Text("Cidade"),
+        SizedBox(height: 5),
         DropdownButtonFormField(
           decoration: const InputDecoration(
     border: OutlineInputBorder(),
@@ -42,7 +44,7 @@ class _DropDownButtonCity extends State<DropDownButtonCity> {
           print("$city");
           });
         }),
-        
+        SizedBox(height: 10),
       ],
     );
   }

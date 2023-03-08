@@ -58,13 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
     return Scaffold(
       
       body: Center(
         
         child : Container(
-          color: Colors.white12,
-          padding: const EdgeInsets.all(16.0), // Adiciona padding para os widgets dentro do Container
+          color: Color.fromRGBO(238,237,242,255),
+          padding: const EdgeInsets.fromLTRB(1, 0, 10, 0), 
           child: Form(child: 
             Column(mainAxisAlignment: 
               MainAxisAlignment.center,
@@ -75,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 800,
                   width: 500,
                   padding: EdgeInsets.symmetric(horizontal: 20),
+
                   margin: const EdgeInsets.all(1.0),
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -90,22 +92,49 @@ class _MyHomePageState extends State<MyHomePage> {
                                     style: TextStyle(fontSize: 24,
                                     fontStyle: FontStyle.normal)),
                       SizedBox(height: 20),
+                      Text("Foto de perfil"),
+                      SizedBox(height: 10),
                       Row(children: [
+                        
                         Container(
                         height: 100,
+                        color: Color.fromARGB(255,238,237,242),
                           padding: EdgeInsets.only(right: 0),
-                        decoration: BoxDecoration(border:Border.all(
-                          color: Color.fromARGB(255, 0, 0, 252),
-                          width: 1.0,
-                        )),
+                        
                         
                         child: Container(
-                            color:Colors.deepPurpleAccent,
+                            
                             child:const Icon
                           (Icons.person_2,
                           size: 100,
-                          color: Color.fromARGB(255, 17, 17, 15)),
+                          color: Color.fromARGB(255, 119, 108, 187)),
                           ),
+                        ),
+                        SizedBox(width: 10),
+                        Column(
+                          
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+
+                            Text("Adicionar imagem"),
+                            SizedBox(height:5),
+                            Text("Fotos apenas em formato em PNG ou JPG."),
+                            SizedBox(height:10),
+                            Row(children: [
+                              
+                              
+                              TextButton(onPressed: onPressed, child: Text("Escolha uma imagem"),
+                                  style: ButtonStyle(side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Colors.blue, width: 2)))
+                              ),
+                              TextButton(
+                              onPressed:onPressed, 
+                              child: Text("Remover"),
+                              style: ButtonStyle(foregroundColor: MaterialStatePropertyAll(Colors.grey)),
+                              )
+
+
+                            ])
+                          ],
                         )
                       ],
                       ),
@@ -113,7 +142,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         TextFieldWithText(title:"Email"),
                         TextFieldWithText(title:"Telefone"),
                         DropDownButtonCity(),
-                        CommentField(),
+                        Text("Sobre mim"),
+                        SizedBox(height: 10,),
+                        TextField(
+                          maxLines: null,
+                          keyboardType: TextInputType.multiline,
+                          decoration: InputDecoration(
+          labelText: "Sobre mim",
+        border:OutlineInputBorder(),
+        floatingLabelBehavior: FloatingLabelBehavior.never,
+                          )), 
                         SideBox()
 
                         
@@ -127,5 +165,8 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         );
   } 
+
+  void onPressed() {
+  }
 }
 

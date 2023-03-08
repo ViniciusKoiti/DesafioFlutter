@@ -6,9 +6,13 @@ class CommentField extends StatelessWidget{
     return Column(
       
       children: [
+        
         Text("Sobre mim"),
-        ExpansionTile(
-          title: Text("Oi princesa"),
+        SizedBox(height:10),
+        TextField(
+          maxLines: null,
+          keyboardType: TextInputType.multiline,
+          
         )
       ],
     );

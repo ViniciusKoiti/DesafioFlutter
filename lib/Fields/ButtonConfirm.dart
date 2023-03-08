@@ -7,7 +7,7 @@ class ButtonConfirm extends StatelessWidget{
   Widget build(BuildContext context) {
     
     return FilledButton(onPressed: onPressed, child: 
-      Text("Confirme")
+      Text("Salvar perfil")
     );
   }
 

@@ -9,9 +9,11 @@ class SideBox extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     
-    return Row(
+    return 
+    Row(
     mainAxisAlignment: MainAxisAlignment.end,
     children: [
+      SizedBox(height: 50,),
       ButtonCancel(),
       SizedBox(width: 20,),
       ButtonConfirm(),
